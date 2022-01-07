@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="myscripts.js"></script>
+    <link rel="stylesheet" href="Assignment4.css">
+
+</head>
+<body>
+
+    <!-- Question 1 -->
+    <h2>Question 1</h2>
+    <button onclick="funct1()">Button 1</button>
+    <button onclick="funct2()">Button 2</button>
+    <p id="whosRight"></p>
+    <script>
+      function funct1() {
+        document.getElementById("whosRight").innerHTML = "I'm Right";
+      }
+      function funct2() {
+        document.getElementById("whosRight").innerHTML = "No, I'm Right";
+      }
+    </script>
+
+    <!-- Question 2 -->
+    <h2>Question 2</h2>
+    <h1><div onmouseover="Alert()">Don't hover over me</div></h1>
+    <script>
+        function Alert(){
+            alert("Hey, I told you not to hover over me!");
+        }
+    </script>
+   
+   <!-- Question 3 -->
+    <h2>Question 3</h2>
+
+    <form action="/action_page.php" method="post">
+    
+        <div class="container">
+            <label for="uname"><b>Username: </b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required><br/>
+            
+            <label for="email"><b>Email: </b></label>
+            <input type="email" placeholder="Enter email" name="email" required><br/>
+
+            <label for="psw"><b>Password: </b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required><br/>
+                
+            <button type="submit">Submit</button>
+        </div>
+
+    </form>
+
+
+    <!-- Question 4 -->
+    <h2>Question 4</h2>
+
+    <form onsubmit = "return false">
+        <td> Enter Password </td>
+        <input type = "password" id = "pswd" value = ""> 
+        <input type = "submit" value = "Submit" onclick=verifyPassword()>
+    </form>
+    <h1 id=passwordChangehh1>Not Logged In</h1>
+    <script>
+        function verifyPassword() {
+            var pw = document.getElementById("pswd").value;
+            //check empty password field
+            if(pw != "12345678") {
+                alert("Password is incorrect");
+            } else{
+            document.getElementById("passwordChangehh1").innerText = "Logged In";
+            }
+        }
+    </script> 
+        
+</body>
+</html>
